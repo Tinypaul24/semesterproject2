@@ -1474,19 +1474,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cristi\\.nuget\\packages\\": {}
+    "C:\\Users\\donic\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cristi\\Documents\\GitHub\\semesterproject2\\HeatProductionSystem\\HeatProductionSystem.csproj",
+      "projectUniqueName": "D:\\GITHUB\\SEMESTER PROJECT 1ST YEAR SEM 2\\semesterproject2\\HeatProductionSystem\\HeatProductionSystem.csproj",
       "projectName": "HeatProductionSystem",
-      "projectPath": "C:\\Users\\Cristi\\Documents\\GitHub\\semesterproject2\\HeatProductionSystem\\HeatProductionSystem.csproj",
-      "packagesPath": "C:\\Users\\Cristi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cristi\\Documents\\GitHub\\semesterproject2\\HeatProductionSystem\\obj\\",
+      "projectPath": "D:\\GITHUB\\SEMESTER PROJECT 1ST YEAR SEM 2\\semesterproject2\\HeatProductionSystem\\HeatProductionSystem.csproj",
+      "packagesPath": "C:\\Users\\donic\\.nuget\\packages\\",
+      "outputPath": "D:\\GITHUB\\SEMESTER PROJECT 1ST YEAR SEM 2\\semesterproject2\\HeatProductionSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Cristi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\donic\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1557,7 +1557,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
