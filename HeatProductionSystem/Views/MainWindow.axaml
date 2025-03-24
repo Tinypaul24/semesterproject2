@@ -74,6 +74,29 @@
                 <TextBlock Text="Scenario 2"/>
             </StackPanel>
         </Button>
+
+            
+         <Button Click="OpenFileButton_Click"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Stretch">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#404040"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="CornerRadius" Value="4"/>
+                    <Setter Property="Padding" Value="15 8"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Foreground" Value="#bf2308"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </Button.Styles>
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="Load Data" Opacity="0.7"/>
+            </StackPanel>
+        </Button>
+        <TextBlock Name="FilePathText" Foreground="White" HorizontalAlignment="Stretch"/>
     </StackPanel>
 
 

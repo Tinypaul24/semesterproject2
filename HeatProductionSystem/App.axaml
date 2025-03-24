@@ -3,7 +3,7 @@
              x:Class="HeatProductionSystem.App"
              xmlns:local="using:HeatProductionSystem"
              xmlns:conv="using:HeatProductionSystem.Converters"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
