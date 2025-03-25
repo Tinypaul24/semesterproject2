@@ -1,0 +1,127 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:HeatProductionSystem.ViewModels"
+             xmlns:local="using:HeatProductionSystem"
+             mc:Ignorable="d" 
+             d:DesignWidth="800" 
+             d:DesignHeight="450"
+             x:DataType="vm:SecondScenarioViewModel"
+             x:Class="HeatProductionSystem.Views.SecondScenario">
+
+    <Grid HorizontalAlignment="Right" Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Right-aligned device panels -->
+        <ItemsControl Grid.Column="1"
+                    ItemsSource="{Binding Devices}"
+                    HorizontalAlignment="Right">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Vertical" Margin="0 0 20 0"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="#F0F0F0"
+                          Padding="15"
+                          CornerRadius="8"
+                          BoxShadow="2 2 8 #00000020">
+                        <StackPanel Orientation="Vertical" 
+                                  HorizontalAlignment="Center"
+                                  Spacing="10"
+                                  IsHitTestVisible="True"
+                                  Background="Transparent">
+          <!-- Device Image -->
+         <!-- <Image Source="{Binding ImagePath}"
+          Width="60" 
+          Height="60"
+          Stretch="UniformToFill"/>-->
+                            
+                            <!-- Device Name -->
+                            <TextBlock Text="{Binding Name}"
+                                     HorizontalAlignment="Center"
+                                     FontSize="14"
+                                     FontWeight="SemiBold"/>
+                            
+        <!-- Toggle Button -->
+        <CheckBox IsChecked="{Binding IsOn, Mode=TwoWay}"
+          HorizontalAlignment="Center"
+          MinWidth="100"
+          MinHeight="30"
+          Padding="8 4">
+    <CheckBox.Styles>
+        <Style Selector="CheckBox">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Name="PART_Border"
+                            CornerRadius="4"
+                            BorderThickness="1"
+                            Background="{DynamicResource SystemControlBackgroundBaseLowBrush}">
+                        <StackPanel Orientation="Horizontal"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Spacing="8">
+                            <!-- Text -->
+                            <TextBlock x:Name="StatusText"
+                                      Text="{Binding IsOn, Converter={StaticResource BoolToOnOffConverter}}"
+                                      FontWeight="Bold"
+                                      VerticalAlignment="Center"/>
+                            
+                            <!-- Icon Container -->
+                            <Grid Width="30" Height="15">
+                                <!-- Check Mark (Green) -->
+                                <Path x:Name="CheckMark"
+                                      Stroke="LimeGreen"
+                                      StrokeThickness="2"
+                                      Data="M 3,8 L 7,12 L 13,4"
+                                      IsVisible="False"/>
+                                
+                                <!-- Red Cross -->
+                                <Path x:Name="CrossMark"
+                                      Stroke="IndianRed"
+                                      StrokeThickness="2"
+                                      Data="M 3,3 L 11,11 M 11,3 L 3,11"
+                                      IsVisible="False"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+
+        <!-- Checked State -->
+        <Style Selector="CheckBox:checked /template/ Border#PART_Border">
+            <Setter Property="BorderBrush" Value="LimeGreen"/>
+        </Style>
+        <Style Selector="CheckBox:checked /template/ TextBlock#StatusText">
+            <Setter Property="Foreground" Value="LimeGreen"/>
+        </Style>
+        <Style Selector="CheckBox:checked /template/ Path#CheckMark">
+            <Setter Property="IsVisible" Value="True"/>
+        </Style>
+
+        <!-- Unchecked State -->
+        <Style Selector="CheckBox:not(:checked) /template/ Border#PART_Border">
+            <Setter Property="BorderBrush" Value="IndianRed"/>
+        </Style>
+        <Style Selector="CheckBox:not(:checked) /template/ TextBlock#StatusText">
+            <Setter Property="Foreground" Value="IndianRed"/>
+        </Style>
+        <Style Selector="CheckBox:not(:checked) /template/ Path#CrossMark">
+            <Setter Property="IsVisible" Value="True"/>
+        </Style>
+    </CheckBox.Styles>
+</CheckBox>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

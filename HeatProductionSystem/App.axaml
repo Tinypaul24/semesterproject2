@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="HeatProductionSystem.App"
              xmlns:local="using:HeatProductionSystem"
-             RequestedThemeVariant="Default">
+             xmlns:conv="using:HeatProductionSystem.Converters"
+             RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
@@ -10,6 +11,14 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme />
+        <SimpleTheme />
     </Application.Styles>
+
+     <Application.Resources>
+         <conv:BoolToOnOffConverter x:Key="BoolToOnOffConverter"/>
+         <SolidColorBrush x:Key="SystemControlBackgroundBaseLowBrush">#22000000</SolidColorBrush>
+         <SolidColorBrush x:Key="SystemControlHighlightAltBaseHighBrush">#60FFFFFF</SolidColorBrush>
+    </Application.Resources>
+
 </Application>
+
