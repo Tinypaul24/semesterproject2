@@ -105,8 +105,8 @@ namespace DataBaseContext
                                 {
                                     var summerRecord = new SummerData
                                     {
-                                        DataFromTime = DateTime.TryParse(file_csv.GetField(5).Trim(), out var fromTime) ? fromTime : (DateTime?)null,
-                                        DataToTime = DateTime.TryParse(file_csv.GetField(6).Trim(), out var toTime) ? toTime : (DateTime?)null,
+                                        DataFromTime = file_csv.GetField(5).Trim(),
+                                        DataToTime = file_csv.GetField(6).Trim(),
                                         HeatDemand = double.TryParse(file_csv.GetField(7).Trim(), out var heatDemand) ? heatDemand : 0.0,
                                         EletricityPrice = double.TryParse(file_csv.GetField(8).Trim(), out var electricityPrice) ? electricityPrice : 0.0
                                     };

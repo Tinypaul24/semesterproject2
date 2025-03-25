@@ -19,9 +19,9 @@ public class SourceDataManagerContext : DataContext {
 public class WinterData{
 
     [Column]
-    public string DataFromTime {get; set;}
+    public string? DataFromTime {get; set;}
     [Column]
-    public string DataToTime {get; set;}
+    public string? DataToTime {get; set;}
     [Column]
     public double HeatDemand {get; set;} //MWh
     [Column]
@@ -32,9 +32,9 @@ public class WinterData{
 public class SummerData{
 
     [Column]
-    public DateTime? DataFromTime {get; set;}
+    public string? DataFromTime {get; set;}
     [Column]
-    public DateTime? DataToTime {get; set;}
+    public string? DataToTime {get; set;}
     [Column]
     public double HeatDemand {get; set;} //MWh
     [Column]
