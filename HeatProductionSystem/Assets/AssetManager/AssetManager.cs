@@ -15,7 +15,6 @@ namespace HeatProductionSystem
     public class ProductionUnit // This class represents a production unit, such as a boiler or a wind turbine
     {
         public string Name { get; set; }
-        public string Image { get; set; }
         public double ProducedHeat { get; set; }
         public double MaxHeat { get; set; }
         public double GasConsumption { get; set; }
@@ -24,6 +23,8 @@ namespace HeatProductionSystem
         public double PrimaryEnergyConsumption { get; set; }
         public double ProductionCosts { get; set; }
         public double ProducedCO2Emissions { get; set; }
+
+        public int MaintenanceDate { get; set; }
 
     }
 
@@ -71,24 +72,24 @@ namespace HeatProductionSystem
                 new ProductionUnit
                 {
                     Name = "Gas Boiler 1",
-                    Image = "Gas Boiler 1.png",
                     ProducedHeat = 100,
                     ProducedElectricity = 50,
                     ConsumedElectricity = 20,
                     PrimaryEnergyConsumption = 150,
                     ProductionCosts = 200,
                     ProducedCO2Emissions = 300
+                    MaintenanceDate = 7
                 },
                 new ProductionUnit
                 {
                     Name = "Unit2",
-                    Image = "unit2.png",
                     ProducedHeat = 200,
                     ProducedElectricity = 100,
                     ConsumedElectricity = 40,
                     PrimaryEnergyConsumption = 300,
                     ProductionCosts = 400,
                     ProducedCO2Emissions = 600
+                    MaintenanceDate = 7
                 }
             };
         }
