@@ -53,7 +53,7 @@ namespace HeatProductionSystem
             Console.WriteLine("Production Units:");
             foreach (var unit in ProductionUnits)
             {
-                Console.WriteLine($"- {unit.Name} ({unit.Image})");
+                Console.WriteLine($"- {unit.Name}");
             }
         }
     }
@@ -71,25 +71,58 @@ namespace HeatProductionSystem
             {
                 new ProductionUnit
                 {
-                    Name = "Gas Boiler 1",
+                    Name = "GB1",
                     ProducedHeat = 100,
                     ProducedElectricity = 50,
                     ConsumedElectricity = 20,
                     PrimaryEnergyConsumption = 150,
                     ProductionCosts = 200,
-                    ProducedCO2Emissions = 300
+                    ProducedCO2Emissions = 300,
                     MaintenanceDate = 7
                 },
                 new ProductionUnit
                 {
-                    Name = "Unit2",
+                    Name = "GB2",
                     ProducedHeat = 200,
                     ProducedElectricity = 100,
                     ConsumedElectricity = 40,
                     PrimaryEnergyConsumption = 300,
                     ProductionCosts = 400,
-                    ProducedCO2Emissions = 600
+                    ProducedCO2Emissions = 600,
                     MaintenanceDate = 7
+                },
+                new ProductionUnit
+                {
+                    Name = "OB1",
+                    ProducedHeat = 200,
+                    ProducedElectricity = 100,
+                    ConsumedElectricity = 40,
+                    PrimaryEnergyConsumption = 300,
+                    ProductionCosts = 400,
+                    ProducedCO2Emissions = 600,
+                    MaintenanceDate = 7
+                },
+                 new ProductionUnit
+                {
+                    Name = "GM1",
+                    ProducedHeat = 200,
+                    ProducedElectricity = 100,
+                    ConsumedElectricity = 40,
+                    PrimaryEnergyConsumption = 300,
+                    ProductionCosts = 400,
+                    ProducedCO2Emissions = 600,
+                    MaintenanceDate = 7
+                },
+                 new ProductionUnit
+                {
+                    Name = "HP1",
+                    ProducedHeat = 200,
+                    ProducedElectricity = 100,
+                    ConsumedElectricity = 40,
+                    PrimaryEnergyConsumption = 300,
+                    ProductionCosts = 400,
+                    ProducedCO2Emissions = 600,
+                    MaintenanceDate = 7,
                 }
             };
         }
